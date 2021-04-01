@@ -4,6 +4,8 @@ This is a basic datasource implementation of a GraphQL server backed by the Comm
 
 This example doesn't include [dataloader](https://github.com/graphql/dataloader) which is necessary when asset, and category types are added with relations to prevent N+1 queries.
 
+Try it yourself: [https://commercejs-graphql.herokuapp.com](https://commercejs-graphql.herokuapp.com)
+
 ## Example query
 
 ```graphql
