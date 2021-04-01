@@ -8,6 +8,8 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources: () => ({ ProductsAPI: new ProductsAPI() }),
+  playground: true,
+  introspection: true,
 });
 
 server.listen(process.env.PORT || 4000).then(({ url }) => {
