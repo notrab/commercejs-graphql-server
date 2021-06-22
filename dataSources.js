@@ -13,9 +13,10 @@ class ChecAPI extends RESTDataSource {
       request.headers = {};
     }
 
-    request.headers = {
-      "X-Authorization": "pk_1930363ad01b716ec4d1e57a6f573a66e4a578796e2b9",
-    };
+    request.headers.set(
+      "X-Authorization",
+      this.context.req.headers["X-Authorization"]
+    );
   }
 }
 

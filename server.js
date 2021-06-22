@@ -10,6 +10,9 @@ const server = new ApolloServer({
   dataSources: () => ({ ProductsAPI: new ProductsAPI() }),
   playground: true,
   introspection: true,
+  context: ({ req }) => ({
+    "X-Authorization": req.headers["X-Authorization"],
+  }),
 });
 
 server.listen(process.env.PORT || 4000).then(({ url }) => {
